@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">Studio Notes</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu" title="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="main-menu" aria-label="Main navigation">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img src="/assets/studio-desk.png" alt="A desk in a quiet studio">
+      <div class="hero-copy">
+        <p>Independent studio</p>
+        <h1>Ideas, notes and unfinished things.</h1>
+        <a href="#work">See what is here</a>
+      </div>
+    </section>
+
+    <section class="work" id="work">
+      <p class="section-label">Recent</p>
+      <div class="work-grid">
+        <article><span>01</span><h2>A small project</h2><p>Some early thinking, collected in one place.</p></article>
+        <article><span>02</span><h2>Another idea</h2><p>A short note about making useful things.</p></article>
+        <article><span>03</span><h2>Work in progress</h2><p>Details will be added when they are ready.</p></article>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <p class="section-label">About</p>
+      <h2>A simple place for experiments.</h2>
+      <p>This page is used for development work and occasional notes. It changes from time to time.</p>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <span>Studio Notes</span>
+    <a href="mailto:hello@selconsulting.io">hello@selconsulting.io</a>
+  </footer>
+  <script src="/assets/app.js"></script>
+</body>
+</html>

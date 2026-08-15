@@ -1,0 +1,6 @@
+{
+  "name": "dev.selconsulting.io",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": { "test": "node tests/validate.mjs" }
+}

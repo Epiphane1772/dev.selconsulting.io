@@ -1,0 +1,36 @@
+:root { color-scheme: light; font-family: Arial, Helvetica, sans-serif; color: #171a18; background: #f4f4ef; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; }
+a { color: inherit; }
+.site-header { height: 68px; display: flex; align-items: center; justify-content: space-between; padding: 0 5vw; background: #f4f4ef; }
+.brand { font-size: 1.05rem; font-weight: 700; text-decoration: none; }
+nav { display: flex; gap: 28px; }
+nav a { font-size: .9rem; text-decoration: none; }
+.menu-toggle { display: none; width: 42px; height: 42px; padding: 10px; border: 0; background: transparent; }
+.menu-toggle span { display: block; height: 2px; margin: 5px 0; background: #171a18; }
+.hero { position: relative; min-height: calc(92vh - 68px); overflow: hidden; background: #202320; }
+.hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,.72), rgba(0,0,0,.08)); }
+.hero-copy { position: relative; z-index: 1; width: min(640px, 85vw); padding: 20vh 0 0 7vw; color: white; }
+.hero-copy p, .section-label { margin: 0 0 22px; font-size: .72rem; text-transform: uppercase; }
+h1 { max-width: 620px; margin: 0 0 36px; font: 400 clamp(2.8rem, 7vw, 6.4rem)/.98 Georgia, serif; }
+.hero-copy a { display: inline-block; padding-bottom: 6px; border-bottom: 1px solid currentColor; text-decoration: none; }
+.work, .about { padding: 90px 7vw; }
+.work-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid #b8bab3; }
+.work-grid article { min-height: 260px; padding: 28px 28px 28px 0; border-bottom: 1px solid #b8bab3; }
+.work-grid article + article { padding-left: 28px; border-left: 1px solid #b8bab3; }
+.work-grid span { color: #a2352c; font-size: .75rem; }
+h2 { font: 400 2rem/1.1 Georgia, serif; }
+.work-grid p, .about p { max-width: 480px; line-height: 1.6; color: #535852; }
+.about { background: #dbe1d6; }
+.about h2 { max-width: 680px; font-size: clamp(2.3rem, 5vw, 4.7rem); }
+footer { display: flex; justify-content: space-between; padding: 34px 7vw; background: #171a18; color: #f4f4ef; }
+@media (max-width: 680px) {
+  .menu-toggle { display: block; }
+  nav { position: absolute; z-index: 4; top: 68px; left: 0; right: 0; display: none; flex-direction: column; padding: 26px 7vw; background: #f4f4ef; }
+  nav.open { display: flex; }
+  .work-grid { grid-template-columns: 1fr; }
+  .work-grid article + article { padding-left: 0; border-left: 0; }
+  footer { flex-direction: column; gap: 16px; }
+}
