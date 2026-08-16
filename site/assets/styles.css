@@ -25,12 +25,17 @@ h2 { font: 400 2rem/1.1 Georgia, serif; }
 .work-grid p, .about p { max-width: 480px; line-height: 1.6; color: #535852; }
 .about { background: #dbe1d6; }
 .about h2 { max-width: 680px; font-size: clamp(2.3rem, 5vw, 4.7rem); }
-footer { display: flex; justify-content: space-between; padding: 34px 7vw; background: #171a18; color: #f4f4ef; }
+footer { display: flex; align-items: flex-start; justify-content: space-between; gap: 32px; padding: 34px 7vw; background: #171a18; color: #f4f4ef; }
+.footer-contact { display: flex; flex-direction: column; gap: 10px; }
+.social-links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 14px 24px; }
+.social-links a { padding: 4px 0; text-underline-offset: 4px; }
+.social-links a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
 @media (max-width: 680px) {
   .menu-toggle { display: block; }
   nav { position: absolute; z-index: 4; top: 68px; left: 0; right: 0; display: none; flex-direction: column; padding: 26px 7vw; background: #f4f4ef; }
   nav.open { display: flex; }
   .work-grid { grid-template-columns: 1fr; }
   .work-grid article + article { padding-left: 0; border-left: 0; }
-  footer { flex-direction: column; gap: 16px; }
+  footer { flex-direction: column; gap: 24px; }
+  .social-links { position: static; display: flex; flex-direction: row; justify-content: flex-start; padding: 0; background: transparent; }
 }
